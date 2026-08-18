@@ -259,12 +259,13 @@ placeholder Legion Code Inc. palette already established in `skills/audit-report
 architecture end to end: the 9 waves (W0-W8), the 20 Bee/Stinger pairs grouped by wave in a roster
 table, the real 8-category weighted scoring rubric, the actual XLSX and report-template deliverables,
 per-harness install paths, and an honest development-status section that states plainly that stage 7
-and the Ship Gate have not run. A first draft used `&mdash;` HTML entities in several bullet points,
-which render visually as em dashes; caught on review against this repo's standing no-em-dash rule and
-replaced with plain hyphens before this addendum was written.
+and the Ship Gate have not run. A first draft used the HTML entity form of the em dash in several
+bullet points, which renders visually as an em dash even though it is not the literal character;
+caught on review against this repo's standing no-em-dash rule and replaced with plain hyphens before
+this addendum was written.
 
 Re-verified independently after all of the above, not taken on faith: a repo-wide scan for literal
-em/en dash characters and `&mdash;`/`&ndash;` entities across every authored `.md`/`.json`/`.py`/`.js`
+em/en dash characters and their HTML entity forms across every authored `.md`/`.json`/`.py`/`.js`
 file, excluding the raw research archives (`shared/research/raw/` and each pair's own
 `references/research/raw/`, which correctly keep verbatim third-party quotes untouched), came back
 clean. `python3 scripts/sync-harnesses.py --check` came back clean. A grep for stale `Proprietary`/
@@ -287,3 +288,61 @@ new ones, and both use the same `<picture>` dark/light-source pattern the source
 badge and logo rendering stays consistent across Legion's repos. Re-verified after editing: no
 em/en dash characters or entities introduced (repo-wide scan, same method as the prior addendum).
 Synced to the connected `website-audit-toolset` device folder.
+
+## Addendum: CI fixed, XLSX/distillation confirmed present, and the GitHub repo does not exist yet
+
+The user asked what's not done, specifically flagging concern that the distillation and the XLSX
+template looked missing, and asked to fix CI and make the repository public once the license was
+settled.
+
+Checked directly rather than assumed: all 20 pairs' `distilled-*.md` files are present (verified by
+`find`), and the audit-scoring XLSX deliverable (`skills/audit-scoring-stinger/references/templates/website-audit-scorecard-template.xlsx`)
+opens cleanly with 16 sheets and 20 named ranges, both here and in the connected device folder,
+where `git ls-files` confirms both are tracked, not gitignored. The actual explanation traced down
+via the GitHub API (`get_me`, `search_repositories`, `get_file_contents`), not guessed at: the
+repository `legioncodeinc/website-audit-toolset` does not exist on GitHub. The device folder's local
+git history (4 commits, `origin` remote configured, a local `origin/main` tracking ref present) looks
+complete, but nothing has actually reached GitHub; a listing of every repo under the `legioncodeinc`
+org (11 repos) confirms this one is not among them, and a direct file-contents fetch against it
+returns a 404 for the org's own owner. Nothing in this session ever attempted a push, so this is not
+something this session caused; it is simply the true current state, now confirmed instead of assumed.
+
+CI was a stub template from `get-started-stinger`'s generic bootstrap, never wired to this repo's
+actual content, and would have failed outright: both `ci.yml` and `codeql.yml` referenced
+`actions/checkout@PIN_ME__resolve_via_gh_api_...`, a literal placeholder string, not a valid action
+reference. `ci.yml` also assumed a Node.js project (`actions/setup-node`, `.nvmrc`, npm cache) that
+does not exist here, and its one real step pointed at `references/scripts/per-type-validation.py`,
+a path from a different plugin (`queen-bee-stinger`), not this repo.
+
+Fixed: both workflow files now pin `actions/checkout` to v7.0.1 and `github/codeql-action/*` to
+v4.37.7 by real commit SHA, resolved via the GitHub API rather than guessed. `ci.yml`'s single
+`validate` job now runs against what this repo actually is (Python scripts plus markdown
+Bees/Stingers): `scripts/sync-harnesses.py --check`, a new `scripts/dash-guard.py` (formalizing the
+manual dash scan this session had been running by hand into a real, repo-committed, CI-enforced
+script, with an explicit exemption list for the two files whose whole purpose is referencing the
+banned characters), a new `scripts/frontmatter-check.py` (validates every `SKILL.md`/agent `.md`'s
+YAML frontmatter, the six-spec-field requirement, the Cowork 200-character description cap, and the
+Cursor folder-name-equals-skill-name rule), a Python syntax check across every `.py` file in the
+repo, and a new `scripts/verify-xlsx-template.py` (opens the XLSX deliverable and checks its sheet
+and named-range counts, guarding against a future silent regeneration dropping content). A new
+`requirements.txt` pins the two runtime dependencies (`openpyxl`, `PyYAML`) these scripts need, so
+CI installs the exact versions this repo was built and verified against, and so
+`.github/dependabot.yml`'s existing pip watcher has something real to track. `.gitignore` was also
+still the unmodified Node/TypeScript template; it did not ignore `__pycache__/`/`*.pyc` at all, so
+running any of the Python scripts locally would leave untracked cache directories under source
+control's nose. Extended its project-specific section for the Python reality of this repo.
+
+Every one of the above checks was run locally end to end exactly as CI will run them (not just
+authored and assumed correct): `pip install -r requirements.txt`, `sync-harnesses.py --check`,
+`dash-guard.py`, `frontmatter-check.py`, a `py_compile` pass over every `.py` file in the repo, and
+`verify-xlsx-template.py` all came back clean. Both workflow YAML files and `dependabot.yml` parse as
+valid YAML.
+
+Not done, and deliberately not attempted without checking in first: creating the GitHub repository
+and pushing to make it public. This repo's own standing Hive rule (`the-hive-architecture`,
+also stated directly in the user's own operating instructions) is that nothing ships without the
+Ship Gate (`security-stinger` -> `quality-stinger` -> `github-repo-health-stinger`) running and
+passing first, with fresh reports the user reviews before any commit or push happens, and that gate
+has not run yet for this repo. Going from private-and-nonexistent to a live public repository is
+exactly the kind of one-way action that rule exists for. Flagged back to the user rather than
+assumed away.

@@ -38,10 +38,10 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@PIN_ME__resolve_via_gh_api_repos_actions_checkout_git_ref_tags_v4 # v4.x.x
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
       - name: Initialize CodeQL
-        uses: github/codeql-action/init@PIN_ME__resolve_via_gh_api_repos_github_codeql-action_git_ref_tags_v3 # v3.x.x
+        uses: github/codeql-action/init@ff2f1c621b7f889edc0d3c761ac2e6a3f8cdb0dd # v4.37.7
         with:
           languages: ${{ matrix.language }}
           # default is precision-tuned; security-extended adds queries at
@@ -52,9 +52,9 @@ jobs:
       # your real build command and drop the autobuild action. JS/TS, Python,
       # Ruby, Go, and Kotlin need no special build configuration.
       - name: Autobuild
-        uses: github/codeql-action/autobuild@PIN_ME__resolve_via_gh_api_repos_github_codeql-action_git_ref_tags_v3 # v3.x.x
+        uses: github/codeql-action/autobuild@ff2f1c621b7f889edc0d3c761ac2e6a3f8cdb0dd # v4.37.7
 
       - name: Perform CodeQL analysis
-        uses: github/codeql-action/analyze@PIN_ME__resolve_via_gh_api_repos_github_codeql-action_git_ref_tags_v3 # v3.x.x
+        uses: github/codeql-action/analyze@ff2f1c621b7f889edc0d3c761ac2e6a3f8cdb0dd # v4.37.7
         with:
           category: "/language:${{ matrix.language }}"

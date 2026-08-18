@@ -69,4 +69,16 @@ Thumbs.db
 Desktop.ini
 
 # ---- Project-specific ----
-# {Add repo-specific ignores below this line.}
+# This plugin's reference scripts, validation scripts, and generators are
+# Python (shared/scripts/, scripts/, skills/*/references/scripts/), not
+# Node/TypeScript. The template above is the Hive's Node/TS baseline;
+# these are the additions this repo actually needs.
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+.venv/
+venv/
