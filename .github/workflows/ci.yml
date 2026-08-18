@@ -1,0 +1,87 @@
+name: CI
+
+# Lint, typecheck, and test on every push and pull request against main.
+# Grounded in least-privilege GITHUB_TOKEN guidance:
+# raw/get-started--ci-security--actions-secure-use-official-docs.md
+# raw/get-started--ci-security--secure-pipelines-cheat-sheet.md
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+# Default every job to read-only. Jobs that need more must grant it themselves.
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      # Pin third-party actions to a full commit SHA, not a tag, and keep the
+      # version comment for readability. Resolve the SHA for your installed
+      # major version with: gh api repos/actions/checkout/git/ref/tags/v4.x.x --jq '.object.sha'
+      - name: Checkout
+        uses: actions/checkout@PIN_ME__resolve_via_gh_api_repos_actions_checkout_git_ref_tags_v4 # v4.x.x
+
+      - name: Set up Node
+        uses: actions/setup-node@PIN_ME__resolve_via_gh_api_repos_actions_setup-node_git_ref_tags_v4 # v4.x.x
+        with:
+          node-version-file: ".nvmrc"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: echo "No package manifest yet: this repo is primarily markdown Stingers/Bees plus scripts. Add install steps once the sync-script runtime (Step 5) and any validation tooling are chosen."
+
+      - name: Lint
+        run: python3 references/scripts/per-type-validation.py --all   # placeholder: wire up once validation scripts land (Step 4/5)
+
+  typecheck:
+    name: Typecheck
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@PIN_ME__resolve_via_gh_api_repos_actions_checkout_git_ref_tags_v4 # v4.x.x
+
+      - name: Set up Node
+        uses: actions/setup-node@PIN_ME__resolve_via_gh_api_repos_actions_setup-node_git_ref_tags_v4 # v4.x.x
+        with:
+          node-version-file: ".nvmrc"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: echo "No package manifest yet: this repo is primarily markdown Stingers/Bees plus scripts. Add install steps once the sync-script runtime (Step 5) and any validation tooling are chosen."
+
+      - name: Typecheck
+        run: echo "N/A: no statically-typed source in this repo yet"
+
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@PIN_ME__resolve_via_gh_api_repos_actions_checkout_git_ref_tags_v4 # v4.x.x
+
+      - name: Set up Node
+        uses: actions/setup-node@PIN_ME__resolve_via_gh_api_repos_actions_setup-node_git_ref_tags_v4 # v4.x.x
+        with:
+          node-version-file: ".nvmrc"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: echo "No package manifest yet: this repo is primarily markdown Stingers/Bees plus scripts. Add install steps once the sync-script runtime (Step 5) and any validation tooling are chosen."
+
+      - name: Test
+        run: echo "N/A: no automated test suite yet"
