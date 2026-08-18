@@ -273,3 +273,17 @@ clean. `python3 scripts/sync-harnesses.py --check` came back clean. A grep for s
 Nothing has been committed to git. This repository still is not a git repository; the user's connected
 device folder already contains a separate git-initialized mirror, and any git operations happen there,
 by the user, not from this session.
+
+## Addendum: README now carries the OSPRY co-marketing block and Legion symbol footer
+
+Per explicit user instruction, `README.md` was updated to mirror two brand elements from the
+`vibe-coding-tools` repo's own README (a sibling Legion Code Inc. repo, inspected directly on the
+user's connected device folder rather than guessed at): the OSPRY co-marketing block right under the
+hero (a themed logo link to ospry.ai plus a one-line value-prop tying this tool's findings to
+OSPRY's revenue-insight positioning) and the Legion Code Inc. symbol in the footer (themed SVG, dark
+and light variants) above the existing "Audit tool created by Legion Code Inc." line. Both blocks
+reuse the exact asset URLs already hosted at `legioncodeinc/brands` on GitHub rather than inventing
+new ones, and both use the same `<picture>` dark/light-source pattern the source README uses, so the
+badge and logo rendering stays consistent across Legion's repos. Re-verified after editing: no
+em/en dash characters or entities introduced (repo-wide scan, same method as the prior addendum).
+Synced to the connected `website-audit-toolset` device folder.

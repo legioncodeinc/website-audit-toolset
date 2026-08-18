@@ -1,6 +1,8 @@
+<div align="center">
+
 # Website Auditor by Legion Code Inc.
 
-**Turn a domain into a scored, evidenced, board-ready audit in one run.**
+### Turn a domain into a scored, evidenced, board-ready audit in one run.
 
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-14213D?style=flat-square)](./LICENSE)
 [![Version](https://img.shields.io/badge/version-0.1.0-2F6FED?style=flat-square)](./.claude-plugin/plugin.json)
@@ -10,6 +12,22 @@
 Runs a full external website audit end to end: intake through branded reports, across SEO, AEO,
 security, accessibility, performance, revenue-funnel UX, analytics, and content, with every score
 backed by evidence and nothing scored from a guess.
+
+</div>
+
+<div align="center">
+
+<a href="https://www.ospry.ai">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/legioncodeinc/brands/main/ospry/logos/png/core-assets/transparent/horizontal-white-1024.png">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/legioncodeinc/brands/main/ospry/logos/png/core-assets/transparent/horizontal-ink-1024.png">
+    <img alt="OSPRY" src="https://raw.githubusercontent.com/legioncodeinc/brands/main/ospry/logos/png/core-assets/transparent/horizontal-ink-1024.png" width="260">
+  </picture>
+</a>
+
+<sub>An audit tells you what's broken. <strong><a href="https://www.ospry.ai">OSPRY</a></strong> is the insight engine that tells you which fix actually moves revenue.</sub>
+
+</div>
 
 ---
 
@@ -234,6 +252,16 @@ the Corresponding Source, per AGPLv3 section 13.
 
 ---
 
-<p align="center">
-  <sub>Audit tool created by <strong>Legion Code Inc.</strong> &middot; <a href="mailto:mario@legioncodeinc.com">mario@legioncodeinc.com</a></sub>
-</p>
+<div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/legioncodeinc/brands/main/legion-code-inc/logos/legion-symbol-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/legioncodeinc/brands/main/legion-code-inc/logos/legion-symbol-light.svg">
+  <img alt="Legion symbol" src="https://raw.githubusercontent.com/legioncodeinc/brands/main/legion-code-inc/logos/legion-symbol-light.svg" width="36">
+</picture>
+
+<sub>Audit tool created by <strong>Legion Code Inc.</strong> &middot; <a href="mailto:mario@legioncodeinc.com">mario@legioncodeinc.com</a></sub>
+
+<sub><strong>We are Legion. Vibe with Legion.</strong></sub>
+
+</div>
