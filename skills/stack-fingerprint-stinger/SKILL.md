@@ -1,7 +1,7 @@
 ---
 name: "stack-fingerprint-stinger"
 description: "Landing-page-only stack and render-mode fingerprinting (React/Vite, Next.js, SvelteKit, WordPress, Shopify, Magento). Writes target-profile.json every later Bee reads."
-license: Proprietary
+license: AGPL-3.0-only
 compatibility: "Claude Code, Cursor, ChatGPT Codex, Claude Cowork."
 metadata:
   hive-tier: stinger

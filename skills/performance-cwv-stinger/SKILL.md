@@ -1,7 +1,7 @@
 ---
 name: "performance-cwv-stinger"
 description: "CDN/caching-header audit plus Core Web Vitals scoring for an external site, from an outside unauthenticated posture. Cross-linked with lighthouse-pagespeed-stinger, not duplicated. Wave W5."
-license: Proprietary
+license: AGPL-3.0-only
 compatibility: "Claude Code, Cursor, ChatGPT Codex, Claude Cowork."
 metadata:
   hive-tier: stinger

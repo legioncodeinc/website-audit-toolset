@@ -1,7 +1,7 @@
 ---
 name: "audit-intake-stinger"
 description: "Runs the four-question intake, scaffolds the shared audit workspace, hydrates every template with the answers. First Bee in every engagement, no authorization-capture step by design."
-license: Proprietary
+license: AGPL-3.0-only
 compatibility: "Claude Code, Cursor, ChatGPT Codex, Claude Cowork."
 metadata:
   hive-tier: stinger

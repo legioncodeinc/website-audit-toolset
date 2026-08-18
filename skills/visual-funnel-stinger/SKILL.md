@@ -1,7 +1,7 @@
 ---
 name: "visual-funnel-stinger"
 description: "25-page visual funnel walk, real desktop (1440x900) and mobile (390x844) Chrome, screenshots at every checkpoint. No state-creating actions unless interactive mode is opted into."
-license: Proprietary
+license: AGPL-3.0-only
 compatibility: "Claude Code, Cursor, ChatGPT Codex, Claude Cowork."
 metadata:
   hive-tier: stinger

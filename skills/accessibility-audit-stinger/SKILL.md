@@ -1,7 +1,7 @@
 ---
 name: "accessibility-audit-stinger"
 description: "Automated-plus-heuristic WCAG 2.1 AA audit across crawled site-data/, a 0-100% score and AA/AAA-style rating, every finding cited with evidence. Not a legal EAA-conformance determination."
-license: Proprietary
+license: AGPL-3.0-only
 compatibility: Claude Code, Cursor, ChatGPT Codex, Claude Cowork.
 metadata:
   hive-tier: stinger

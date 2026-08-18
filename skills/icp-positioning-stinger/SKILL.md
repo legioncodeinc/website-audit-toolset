@@ -1,7 +1,7 @@
 ---
 name: "icp-positioning-stinger"
 description: "Niche/ICP/goal assessment, conversion-action taxonomy, two-stage buyer-readiness model. Owns the run's hard focus-undeterminable gate: halts and asks rather than guessing."
-license: Proprietary
+license: AGPL-3.0-only
 compatibility: "Claude Code, Cursor, ChatGPT Codex, Claude Cowork."
 metadata:
   hive-tier: stinger

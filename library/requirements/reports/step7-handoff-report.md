@@ -233,3 +233,43 @@ this plugin gets wired into the live routing layer. The Ship Gate
 (`security-stinger` -> `quality-stinger` -> `github-repo-health-stinger`) also has not run; per
 `the-beekeeper`'s own standing rule, nothing gets committed without it, and this repo is still not a
 git repository.
+
+## Addendum: license switched to AGPLv3, README rewritten and branded for Legion Code Inc.
+
+Per explicit user instruction, the plugin's license changed from proprietary (Legion Code Inc., all
+rights reserved) to the GNU Affero General Public License, version 3 (AGPLv3). The authoritative
+license text was fetched directly from `https://www.gnu.org/licenses/agpl-3.0.txt` rather than
+reproduced from training data, to avoid any transcription error in a legal document. `LICENSE` now
+carries a filled-in notice header (program name, "Copyright (C) 2026 Legion Code Inc.", the standard
+redistribute/warranty boilerplate, a contact address, and an explicit note on AGPLv3 section 13's
+network-interaction Corresponding-Source obligation, since this tool interacts with users remotely by
+design) followed by the full, verbatim license text.
+
+The license field was updated everywhere it is declared: `.claude-plugin/plugin.json` (the canonical
+source), all 21 `skills/*/SKILL.md` frontmatter blocks, and the three generated harness manifests
+(`plugin.json`, `.cursor-plugin/plugin.json`, `.codex-plugin/plugin.json`), regenerated via
+`python3 scripts/sync-harnesses.py` and re-verified with `--check` afterward (clean: 21 skills, 20
+agents, 1 command, no drift). One historical mention of "Proprietary" remains, in
+`step1-get-started-setup-report.md`, left untouched as an accurate record of the repo's state at that
+earlier point in time, matching the standing practice of not rewriting history in prior reports.
+
+`README.md` was rewritten in full: real content in place of the unfilled template, branded with the
+placeholder Legion Code Inc. palette already established in `skills/audit-reporting-stinger/references/templates/brand.json`
+(`#14213D` deep navy, `#2F6FED` accent blue) rather than inventing a new one. It covers the real
+architecture end to end: the 9 waves (W0-W8), the 20 Bee/Stinger pairs grouped by wave in a roster
+table, the real 8-category weighted scoring rubric, the actual XLSX and report-template deliverables,
+per-harness install paths, and an honest development-status section that states plainly that stage 7
+and the Ship Gate have not run. A first draft used `&mdash;` HTML entities in several bullet points,
+which render visually as em dashes; caught on review against this repo's standing no-em-dash rule and
+replaced with plain hyphens before this addendum was written.
+
+Re-verified independently after all of the above, not taken on faith: a repo-wide scan for literal
+em/en dash characters and `&mdash;`/`&ndash;` entities across every authored `.md`/`.json`/`.py`/`.js`
+file, excluding the raw research archives (`shared/research/raw/` and each pair's own
+`references/research/raw/`, which correctly keep verbatim third-party quotes untouched), came back
+clean. `python3 scripts/sync-harnesses.py --check` came back clean. A grep for stale `Proprietary`/
+`MIT` references found only the one historical report mention noted above.
+
+Nothing has been committed to git. This repository still is not a git repository; the user's connected
+device folder already contains a separate git-initialized mirror, and any git operations happen there,
+by the user, not from this session.

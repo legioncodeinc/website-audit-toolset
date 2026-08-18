@@ -1,7 +1,7 @@
 ---
 name: "ecommerce-catalog-stinger"
 description: "Bonus, conditional ecommerce audit: up to 25 products, schema.org Product metadata completeness (quantified) plus subjective copy/conversion quality, kept separate. Wave W6b."
-license: Proprietary
+license: AGPL-3.0-only
 compatibility: "Claude Code, Cursor, ChatGPT Codex, Claude Cowork."
 metadata:
   hive-tier: stinger

@@ -1,7 +1,7 @@
 ---
 name: "audit-scoring-stinger"
 description: "N/A-aware weighted rollup engine (leaf to sub-audit to category to final), critical-security-override, populates the branded named-range-driven XLSX scorecard."
-license: Proprietary
+license: AGPL-3.0-only
 compatibility: "Claude Code, Cursor, ChatGPT Codex, Claude Cowork."
 metadata:
   hive-tier: stinger

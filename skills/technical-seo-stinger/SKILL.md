@@ -1,7 +1,7 @@
 ---
 name: "technical-seo-stinger"
 description: "100-page technical SEO audit: crawlability/indexability, sitemap/robots.txt validation, canonicalization, log-file/crawl-budget analysis, keyword-frequency and long-tail semantic analysis. Wave W5."
-license: Proprietary
+license: AGPL-3.0-only
 compatibility: Claude Code, Cursor, ChatGPT Codex, Claude Cowork.
 metadata:
   hive-tier: stinger

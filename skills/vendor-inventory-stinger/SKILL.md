@@ -1,7 +1,7 @@
 ---
 name: "vendor-inventory-stinger"
 description: "Third-party vendor census after a real JS-executed page load, including GTM-hydrated scripts and content-injection/metadata-manipulation tools like Search Atlas, classified by function."
-license: Proprietary
+license: AGPL-3.0-only
 compatibility: "Claude Code, Cursor, ChatGPT Codex, Claude Cowork."
 metadata:
   hive-tier: stinger

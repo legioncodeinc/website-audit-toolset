@@ -1,7 +1,7 @@
 ---
 name: "internal-linking-stinger"
 description: "Internal link-graph analysis: orphan-page detection, click-depth via BFS, four-dimension anchor-text scoring plus cannibalization detection, internal-PageRank-style equity flow. Wave W5."
-license: Proprietary
+license: AGPL-3.0-only
 compatibility: "Claude Code, Cursor, ChatGPT Codex, Claude Cowork."
 metadata:
   hive-tier: stinger

@@ -1,7 +1,7 @@
 ---
 name: "audit-reporting-stinger"
 description: "Generates customer- and auditor-facing reports (Markdown + styled HTML), subtly Legion Code Inc.-branded, rendered only from the scored findings register."
-license: Proprietary
+license: AGPL-3.0-only
 compatibility: Claude Code, Cursor, ChatGPT Codex, Claude Cowork.
 metadata:
   hive-tier: stinger

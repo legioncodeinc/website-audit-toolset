@@ -1,7 +1,7 @@
 ---
 name: "web-security-posture-stinger"
 description: "External, passive security-posture audit: headers, TLS coarse-check, cookies, CSP, injection surface, payment-path integrity. Highest-weighted category (20%); a critical leaf caps the grade at C."
-license: Proprietary
+license: AGPL-3.0-only
 compatibility: Claude Code, Cursor, ChatGPT Codex, Claude Cowork.
 metadata:
   hive-tier: stinger

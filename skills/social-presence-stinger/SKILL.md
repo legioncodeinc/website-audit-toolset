@@ -1,7 +1,7 @@
 ---
 name: "social-presence-stinger"
 description: "Facebook/LinkedIn/Instagram presence audit via the harness's own browser tooling, opt-in auth per platform; decline or unavailable auth is a silent no-op, never a score penalty."
-license: Proprietary
+license: AGPL-3.0-only
 compatibility: "Claude Code, Cursor, ChatGPT Codex, Claude Cowork."
 metadata:
   hive-tier: stinger

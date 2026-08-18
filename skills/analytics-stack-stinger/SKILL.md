@@ -1,7 +1,7 @@
 ---
 name: "analytics-stack-stinger"
 description: "Foundational, industry-specific, and lawful-only de-anonymization analytics audit, built on the vendor census. Flags jurisdiction questions rather than a compliance verdict. Wave W5."
-license: Proprietary
+license: AGPL-3.0-only
 compatibility: "Claude Code, Cursor, ChatGPT Codex, Claude Cowork."
 metadata:
   hive-tier: stinger

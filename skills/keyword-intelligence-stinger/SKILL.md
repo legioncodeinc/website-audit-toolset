@@ -1,7 +1,7 @@
 ---
 name: "keyword-intelligence-stinger"
 description: "Compiles 75-100 keywords + 25-50 questions via a strict 4-tier source chain: Search Console MCP > customer Trends export > EXA/Firecrawl inference > paid API. Degrades gracefully."
-license: Proprietary
+license: AGPL-3.0-only
 compatibility: "Claude Code, Cursor, ChatGPT Codex, Claude Cowork."
 metadata:
   hive-tier: stinger

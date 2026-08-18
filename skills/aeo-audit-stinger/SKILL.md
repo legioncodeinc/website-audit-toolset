@@ -1,7 +1,7 @@
 ---
 name: "aeo-audit-stinger"
 description: "100-page AEO audit: llms.txt presence, per-engine AI-crawler robots.txt access (GPTBot, PerplexityBot, ClaudeBot, etc.), citation-relevant structured data, subjective topical alignment. Wave W5."
-license: Proprietary
+license: AGPL-3.0-only
 compatibility: Claude Code, Cursor, ChatGPT Codex, Claude Cowork.
 metadata:
   hive-tier: stinger

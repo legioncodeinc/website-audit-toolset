@@ -1,7 +1,7 @@
 ---
 name: "blog-content-stinger"
 description: "Bonus, conditional blog audit: 10 recent posts, word count, subjective quality read, AI-authorship reported only as a probability band with method and error rate, never a verdict. Wave W6a."
-license: Proprietary
+license: AGPL-3.0-only
 compatibility: "Claude Code, Cursor, ChatGPT Codex, Claude Cowork."
 metadata:
   hive-tier: stinger

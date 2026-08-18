@@ -6,7 +6,7 @@
     "name": "Legion Code Inc"
   },
   "repository": "https://github.com/legioncodeinc/website-audit-toolset",
-  "license": "Proprietary",
+  "license": "AGPL-3.0-only",
   "keywords": [
     "website-audit",
     "seo",

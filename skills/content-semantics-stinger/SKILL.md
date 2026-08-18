@@ -1,7 +1,7 @@
 ---
 name: "content-semantics-stinger"
 description: "Quantified reading-level estimate (Flesch Reading Ease/Grade Level) plus a subjective ICP-relevancy score per crawled page, kept in separate sections. Wave W5."
-license: Proprietary
+license: AGPL-3.0-only
 compatibility: "Claude Code, Cursor, ChatGPT Codex, Claude Cowork."
 metadata:
   hive-tier: stinger

@@ -1,7 +1,7 @@
 ---
 name: "master-website-auditor"
 description: "Fallback orchestrator for harnesses without native command dispatch. Activates the same 20 Bee/Stinger pairs as /perform-website-audit, same order, same shared workspace."
-license: Proprietary
+license: AGPL-3.0-only
 compatibility: "Claude Code, Cursor, ChatGPT Codex, Claude Cowork."
 metadata:
   hive-tier: orchestrator

@@ -1,7 +1,7 @@
 ---
 name: "site-crawler-stinger"
 description: "Platform-aware crawl to depth 100, raw HTML+MD storage in site-data/, which nine Wave-5 Bees then read read-only with zero write contention."
-license: Proprietary
+license: AGPL-3.0-only
 compatibility: "Claude Code, Cursor, ChatGPT Codex, Claude Cowork."
 metadata:
   hive-tier: stinger
